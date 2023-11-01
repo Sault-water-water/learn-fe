@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tel {
+        margin: 20px auto;
+        border: 1px solid #d6d5d6;
+        height: 215px;
+        width: 200px;
+    }
+
+    .tel a {
+        color: #8b8c8b;
+        font-size: 14px;
+        padding: 5px 15px;
+        display: block;
+        text-decoration: none;
+    }
+
+    .tel h5 {
+        padding: 5px 20px;
+        font-weight: 400;
+        border-bottom: 1px dotted #d6d5d6;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .tel a:hover {
+        text-decoration: underline;
+    }
+
+    .radius {
+        height: 200px;
+        width: 500px;
+        background-color: blue;
+
+        /* 可以赋四个值,左上开始顺时针,也可以单独赋值border-bottom-right-radius */
+        border-radius: 100px;
+        /* 高度一半圆角矩形 */
+        margin: 20px auto;
+    }
+
+    .shadow {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        background-color: pink;
+    }
+
+    .shadow:hover {
+        box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+
+    }
+
+    .left,
+    .right {
+        float: left;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+    }
+
+    .right {
+        float: right;
+    }
+
+    /* 添加浮动后成为行内块元素 */
+
+    .box {
+        width: 800px;
+        height: 400px;
+        background-color: pink;
+        margin: 0 auto;
+    }
+
+    .left1,
+    .right1 {
+        height: 400px;
+    }
+
+    .left1 {
+        float: left;
+        background-color: purple;
+        width: 300px;
+    }
+
+    .right1 {
+        float: left;
+        width: 500px;
+        background-color: skyblue;
+    }
+
+    .box1 {
+        width: 750px;
+        height: 200px;
+        background-color: pink;
+        margin: 0 auto;
+
+    }
+
+    .box1 li {
+        margin-right: 10px;
+        float: left;
+        width: 180px;
+        height: 200px;
+        background-color: green;
+    }
+
+    .box1 .last {
+        margin-right: 0;
+    }
+
+    .top {
+        height: 50px;
+        background-color: gray;
+    }
+
+    .banner {
+        width: 830px;
+        height: 150px;
+        margin: 10px auto;
+        background-color: grey;
+    }
+
+    .main,
+    .footer {
+        background-color: gray;
+    }
+
+    .main {
+        width: 830px;
+        height: 70px;
+        margin: 10px auto;
+
+    }
+
+    .main li {
+        float: left;
+        height: 70px;
+        width: 200px;
+        margin-right: 10px;
+        background-color: skyblue;
+    }
+
+    .main .last {
+        margin-right: 0;
+    }
+
+    .footer {
+        margin: 10px;
+        height: 400px;
+    }
+
+    /* 浮动的元素只会影响后面的元素 */
+
+    .box2 {
+        width: 700px;
+        background-color: red;
+        margin: 10px auto;
+    }
+
+    .da {
+        float: left;
+        width: 120px;
+        height: 90px;
+        background-color: green;
+
+    }
+
+    .er {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+
+    .other {
+        height: 150px;
+        background-color: gray;
+    }
+
+    /* 清除浮动1. */
+    .clear {
+        clear: both;
+    }
+
+    /* 清除浮动2. */
+    /* 父级添加overflow: hidden; */
+
+
+    /* 清除浮动3. */
+    .clearfix:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        /* IE6、7 专有 */
+        *zoom: 1;
+    }
+
+    /* 父级类添加clearfix */
+
+    /* 4.双伪元素清除浮动 */
+    .clearfix:before,
+    .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+</style>
+
+<body>
+
+    <div class="box2">
+        <div class="da">大毛</div>
+        <div class="er">二毛</div>
+        <div class="clear"></div>
+    </div>
+    <div class="other"></div>
+    <br><br><br><br><br>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="main">
+        <ul>
+            <li class="fast">0</li>
+            <li>0</li>
+            <li>0</li>
+            <li class="last">0</li>
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+    <ul class="box1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+    <br><br><br><br><br><br>
+    <div class="box">
+        <div class="left1">11</div>
+        <div class="right1">22</div>
+    </div>
+    <br><br><br><br>
+    <div class="right">1</div>
+    <div class="left">2</div>
+    <div class="shadow"></div>
+    <div class="radius"></div>
+    <div class="tel">
+        <h5>品优购快报</h5>
+        <a href="#">
+            <特惠> 爆款好物爆款好物
+        </a>
+        <a href="#">
+            <特惠> 爆款好物爆款好物
+        </a>
+        <a href="#">
+            <特惠> 爆款好物爆款好物
+        </a>
+        <a href="#">
+            <特惠> 爆款好物爆款好物
+        </a>
+        <a href="#">
+            <特惠> 爆款好物爆款好物
+        </a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 权重可叠加不进位,继承的样式权重为0 */
+
+        /* li 0,0,0,1
+        ul li 0,0,0,1+0,0,0,1=0,0,0,2
+        .nav li>.pink
+        .red 0,0,1,0
+        #green 0,1,0,0
+        行内style 1,0,0,0
+        !important 无穷 */
+
+        /* p {
+            font-size: 32px;
+        }
+
+        body {
+            font: 5px/1.5 'Microsoft YaHei';
+        } */
+
+        .red {
+            color: red !important;
+
+        }
+
+        #green {
+            color: green;
+        }
+
+        .nav {
+            width: 300px;
+            height: 200px;
+            border-width: 10px;
+            /* 实线虚线点线 */
+            border-style: solid;
+            border-style: dashed;
+            border-style: dotted;
+            border-color: pink;
+        }
+
+        .easy {
+            height: 100px;
+            width: 200px;
+            /* 没有顺序 */
+
+            /* 层叠性 */
+            border: 5px solid skyblue;
+            border-bottom: 5px solid purple;
+            /* 边框会让盒子变大 */
+        }
+
+        table,
+        td {
+            border: 1px solid pink;
+            /* 合并相邻的边框 */
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .demo {
+            height: 300px;
+            width: 300px;
+            padding: 5px;
+            background: pink;
+            /* 一个值 上右下左 */
+            /* 两个值 上下 左右 */
+            /*三个值 上5 左右10 下20 */
+            padding: 5px 10px 20px;
+            /* 四个值 上 右 下 左 (顺时针) */
+        }
+
+        .a {
+            height: 41px;
+            text-decoration: none;
+            border-bottom: 1px solid #edeef0;
+            border-top: 3px solid #ff8500;
+            background-color: #fcfcfc;
+        }
+
+        .a a {
+            display: inline-block;
+            line-height: 41px;
+            height: 41px;
+            font-size: 14px;
+            padding: 0 20px;
+            text-decoration: none;
+            color: #4c4c4c;
+        }
+
+        .a a:hover {
+            background-color: #eee;
+            color: #ff8500;
+        }
+
+        h1 {
+            height: 200px;
+            background-color: pink;
+        }
+
+        .div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* margin与border上右下左相同 */
+            margin: 0 auto;
+        }
+
+        .one {
+            margin: 20px;
+        }
+
+        /* 行内元素或行内块元素水平居中给其父元素添加text-align:center */
+
+        .father {
+            height: 200px;
+            width: 200px;
+            background-color: purple;
+            margin-top: 20px;
+        }
+
+        .son {
+            height: 100px;
+            width: 100px;
+            background-color: skyblue;
+            margin-top: 50px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 415px;
+            width: 298px;
+            background-color: #fff;
+            margin: 30px auto;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .box img {
+            /* 图片要用父亲的宽度 */
+            width: 100%;
+        }
+
+        .box p {
+            margin-top: 30px;
+            height: 70px;
+            /* p没有宽度用padding不会撑开盒子 */
+            padding: 0 28px;
+            font-size: 14px;
+        }
+
+        .box .appraise {
+            font-size: 12px;
+            color: #b0b0b0;
+            margin-top: 20px;
+            padding: 0 28px;
+        }
+
+        .info {
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 0 28px;
+        }
+
+        .box h4 {
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .box span {
+            color: #ff8500;
+        }
+
+        .info em {
+            font-style: normal;
+            color: #e4e4e4;
+            margin: 0 6px 0 15px;
+        }
+
+        .info a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\05-前端基础CSS第三天\案例\images\img.jpg" alt="图片">
+        <p>
+            这是一则广告评论这是一则广告评论这是一则广告评论
+        </p>
+        <div class="appraise">来自于123456789的评价</div>
+        <div class="info">
+            <h4><a href="#">无线耳机无线耳机</a> </h4>
+            <em>|</em>
+            <span> 99.9元</span>
+        </div>
+    </div>
+    <div class="father">00
+        <div class="son">11</div>
+    </div>
+    <div class="one">1</div>
+    <div>2</div>
+    <h1>
+
+    </h1>
+    <div class="a">
+        <a href="#">一共五个</a>
+        <a href="#">一共五个字</a>
+        <a href="#">一共</a>
+        <a href="#">一共五</a>
+    </div>
+    <br><br>
+    <div class="demo">我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容
+
+    </div><br><br>
+    <table align="center" cellspacing="0">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <div class="easy"></div>
+    <div class="nav"></div>
+    <div>我是div</div>
+    <p class="red" id="green" style="color:pink;">我是段落</p>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+let str = 'n.译文;译文;译文;译文;adj.译文;译文;译文;译文;adv.译文;译文;译文;译文;';
+const transReg = /\w+\./g; 
+
+const arr = str.split(transReg).filter(item=>item!='')
+for(let i=0; i<arr.length; i++){
+  arr[i]=str.match(transReg)[i].concat(arr[i])
+}
+
+console.log(arr);
+
+
+
+
+
+
+
+
+
+</script>
+</html>

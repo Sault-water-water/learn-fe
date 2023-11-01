@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 60px;
+            height: 60px;
+            margin: 0px auto;
+            background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/09-前端基础CSS第七天/案例/images/sprites.png) -182px 0;
+
+        }
+
+        .box2 {
+            width: 27px;
+            height: 25px;
+            margin: 50px;
+            background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/09-前端基础CSS第七天/案例/images/sprites.png) -155px -106px;
+
+        }
+
+        span {
+            display: inline-block;
+
+        }
+
+        .p {
+            width: 100px;
+            height: 112px;
+
+            background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/09-前端基础CSS第七天/案例/images/abcd.jpg) no-repeat -493px -276px;
+
+        }
+
+        /* 字体声明 */
+        /* font文件夹放到根目录内 */
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?p4ssmb');
+            src: url('fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?p4ssmb') format('truetype'),
+                url('fonts/icomoon.woff?p4ssmb') format('woff'),
+                url('fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        .span {
+            font-family: 'icomoon';
+            font-size: 100px;
+            color: pink;
+        }
+
+        .box3 {
+            width: 0;
+            height: 0;
+            border: 500px solid transparent;
+            border-top-color: red;
+
+        }
+
+        .jd {
+            position: relative;
+            width: 120px;
+            height: 249px;
+            background-color: pink;
+        }
+
+        .jd span {
+            position: absolute;
+            right: 15px;
+            top: -10px;
+            width: 0;
+            height: 0;
+            /* 为了兼顾兼容性添加下面两句 */
+            line-height: 0;
+            font-size: 0;
+            border: 5px solid transparent;
+            border-bottom-color: skyblue;
+
+        }
+
+        /* 取消表单轮廓 */
+        input,
+        textarea {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        img {
+            /* 行内块元素都可以添加vertical-align,比如文本域,默认和基线对齐 */
+            vertical-align: bottom;
+            vertical-align: top;
+            vertical-align: middle;
+            /* margin: 20px; */
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* 默认 */
+            white-space: normal;
+            /* 不换行 */
+            white-space: nowrap;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 超出部分省略号显示 */
+            text-overflow: ellipsis;
+
+        }
+
+        .box11 {
+            margin: 20px;
+            width: 100px;
+            height: 65px;
+            background-color: pink;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本的行数 */
+            -webkit-line-clamp: 3;
+            /* 设置或检索伸缩盒对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+
+        ul li {
+            float: left;
+
+            margin-left: -1px;
+            list-style: none;
+            height: 200px;
+            width: 150px;
+            border: 1px solid red;
+        }
+
+        ul li:hover {
+            z-index: 2;
+            /* 用相对定位使盒子浮在最上层 */
+            position: relative;
+            border: 1px solid yellow;
+
+        }
+
+        .box12 {
+            width: 300px;
+            height: 70px;
+            background-color: green;
+            margin: 20px auto;
+            padding: 5px;
+        }
+
+        .pic {
+            float: left;
+            width: 120px;
+            height: 60px;
+            margin-right: 5px;
+        }
+
+        .pic img {
+            width: 100%;
+            vertical-align: bottom;
+
+        }
+
+        .box13 a {
+            display: inline-block;
+            padding: 0 4px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 36px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+        }
+
+        .box13 {
+            /* 给行内块元素父级添加text-align center,行内块元素自动居中 */
+            text-align: center;
+        }
+
+
+        /* 三角 */
+        .box14 {
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+
+            width: 0;
+            height: 0;
+            border: 24px solid transparent;
+            border-right: 10px solid #fff;
+            border-bottom: 0px;
+
+            /* border-color: transparent aqua transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0; */
+
+        }
+
+        .price {
+            position: relative;
+
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 24px;
+        }
+
+        .box21 {}
+
+        .seckill {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .origin {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="price">
+        <span class="seckill">$1699 <div class="box14"></div></span>
+        <span class="origin">$2199</span>
+    </div>
+    <div class="box21"></div>
+    <div class="box14"></div>
+    <div class="box13">
+        <a href="#">&lt;&lt;上一页</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+    </div>
+    <div class="box12">
+        <div class="pic"><img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\09-前端基础CSS第七天\案例\images\img.png" alt=""></div>
+        <p>我是文字我是文字我是文字我是文字我是文字我是文字我是文字</p>
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <div class="box11">我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+
+    <div class="box4">我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字我是文字</div>
+    <img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\09-前端基础CSS第七天\案例\images\ldh.jpg" alt="">图片和文字基线对齐,底线对齐,中线对齐,顶部对齐
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="text">
+    <ul>
+        <li style="cursor: default;">鼠标默认样式</li>
+        <li style="cursor: pointer;">鼠标小手样式</li>
+        <li style="cursor: move;">鼠标移动样式</li>
+        <li style="cursor: text;">鼠标文本样式</li>
+        <li style="cursor:not-allowed">鼠标禁止样式</li>
+    </ul>
+    <div class="jd">
+        <span></span>
+    </div>
+    <div class="box3"></div>
+    <span></span>
+    <br><br>
+    <span class="p">p</span>
+    <span class="i">i</span>
+    <span class="n">n</span>
+    <span class="k">k</span>
+    <div class="box2"></div>
+    <div class="box1"></div>
+</body>
+
+</html>

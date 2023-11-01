@@ -1,0 +1,155 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+
+.logo {
+    padding: 20px 0;
+}
+
+.registerarea {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    background-color: #edeced;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: normal;
+    color: #6d716f;
+}
+
+.l {
+    line-height: 30px;
+    float: left;
+}
+
+.r {
+    float: right;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.r a {
+    color: #c81523;
+}
+
+.reg_form {
+    width: 600px;
+    height: 350px;
+    margin: 30px auto;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.reg_form ul li input {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: #c81523;
+}
+
+.error_icon,
+.success_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/12-前端基础-PC端品优购项目（下）/案例/shoping/images/error.png);
+    margin-top: -2px;
+}
+
+.success {
+    color: green;
+}
+
+.success_icon {
+    background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/12-前端基础-PC端品优购项目（下）/案例/shoping/images/success.png);
+
+}
+
+.safe {
+    padding-left: 135px;
+}
+
+.safe em {
+    padding: 0 12px;
+    color: #fff;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+
+}
+
+.qiang {
+    background-color:
+        #f79100;
+
+}
+
+#agree_inp {
+    width: 16px;
+    height: 16px;
+
+}
+
+.agree {
+    padding-left: 100px;
+}
+
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #36a9f6;
+}
+
+.btn {
+
+    width: 200px;
+    height: 34px;
+    background-color: #c81523;
+    color: #fff;
+    margin: 30px 0 0 70px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.links {
+    margin-bottom: 15px;
+}
+
+.links {
+    margin: 0 3px;
+}
+
+.copyright {
+    line-height: 20px;
+}

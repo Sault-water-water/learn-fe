@@ -1,0 +1,49 @@
+/* 标签选择器 */
+body {
+    font: 16px/28px "Microsoft YaHei","宋体";
+}
+
+h1 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-indent: 2em;
+}
+
+/* 类选择器 */
+
+.green {
+    color: green;
+}
+
+.center {
+    text-align: center;
+}
+
+.grey {
+    color: #888;
+    font-size: 12px;
+}
+
+/* 图片需要给父级标签添加选择器代码 */
+.pic {
+    text-align: center;
+}
+
+/* id选择器 */
+
+* #search {
+    color: #666;
+    width: 170px;
+}
+
+* #footer{
+    color: #666;
+    font-size: 12px;
+    text-align: right;
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box1,
+        .box2 {
+            height: 200px;
+            width: 200px;
+        }
+
+        .box2 {
+            background-color: pink;
+        }
+
+        .box1 {
+            background-color: pink;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .son1 {
+            position: absolute;
+            /* 绝对定位飘老高,不占原先位置 */
+            right: 25px;
+            bottom: 20px;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            /* 父级不存在或父级无定位以浏览器为标准定位 */
+            /* 直到找到最近一级祖先有定位 */
+            /* 子绝父相 */
+        }
+
+        .father1 {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+
+        .grandfather {
+            position: relative;
+            /* 相对定位保留原先标准流位置 */
+            width: 800px;
+            height: 800px;
+            background-color: red;
+        }
+
+        .dj {
+            /* 只有定位才能加的属性 */
+            /* 层 */
+            z-index: 1;
+            /* 数值越大越靠上,默认auto后来者居上 */
+            position: fixed;
+            top: 40px;
+            right: 20px;
+
+        }
+
+        .wbox {
+            position: relative;
+            margin: 5px auto;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+        }
+
+        .box3 {
+            position: fixed;
+            /* 固定定位不占有原先位置 */
+            left: 50%;
+            margin-left: 405px;
+            top: 0;
+            width: 20px;
+            height: 50px;
+            background-color: skyblue;
+        }
+
+        .nav {
+            position: sticky;
+            /* 粘性定位占有原先位置 */
+            top: 0;
+            width: 800px;
+            height: 50px;
+            background-color: greenyellow;
+            margin: 100px auto;
+        }
+
+        box4 {
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            /* 走父容器的50% */
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        span {
+            /* 和浮动类似,行内元素添加定位后可以直接添加高度和宽度 */
+            /* 块级元素添加定位后不给宽度是内容的宽度 */
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .box11 {
+            /* 浮动盒子会压住标准流的盒子,但会把盒子里的文字挤到一边 */
+            /* 而绝对定位会压住下面标准流的所有内容 */
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+        }
+
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .tb-promo img {
+            width: 100%;
+
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .next {
+            /* 如果有两个冲突元素left和right top和bottom,先左后右,先上后下 */
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .promo-nav {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .promo-nav li {
+            float: left;
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+
+        .box12,
+        .box13 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .box12 {
+            margin: 20px 0;
+
+            /* 1.隐藏并失去位置 */
+            /* display: none; */
+
+            /* 2.隐藏并保留位置 */
+            /* visibility: hidden; */
+
+            /* 3.溢出隐藏 */
+            /* scroll 无论溢出都显示滚动条 */
+            /* auto 无溢出不显示 */
+            overflow: hidden;
+            overflow: scroll;
+            overflow: auto;
+            /* 有定位的盒子慎用overflow: hidden,会隐藏多余部分 */
+        }
+
+        .tudo {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .tudo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .4) url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/08-前端基础CSS第六天/案例/images/arr.png) no-repeat center;
+        }
+
+        .tudo:hover .mask {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudo">
+        <div class="mask"></div>
+        <img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tudou.jpg" alt="">
+    </div>
+    <div class="box12">
+        12D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpgD:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpgD:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpgD:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpgD:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpg
+    </div>
+    <div class="box13">13</div>
+    <div class="tb-promo">
+        <img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\tb.jpg" alt="">
+        <a href="#" class="prev">&lt;</a>
+        <a href="#" class="next">&gt;</a>
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="box11"></div>
+
+    <p>扶摇直上九万里扶摇直上九万里扶摇直上九万里</p>
+    <span>123</span>
+    <div class="box4"></div>
+    <div class="nav"></div>
+    <div class="box3"></div>
+    <div class="wbox"></div>
+
+    <div class="dj">
+        <img src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\08-前端基础CSS第六天\案例\images\pvp.png" alt="picture">
+    </div>
+    <div class="grandfather">
+        <div class="father1">
+            <div class="son1"></div>
+        </div>
+
+    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+</body>
+
+</html>

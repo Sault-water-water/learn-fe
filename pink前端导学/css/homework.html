@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mi {
+            width: 85px;
+            height: 85px;
+            background-color: #ff6700;
+            margin: 20px auto;
+        }
+
+        .mi .pre {
+            float: left;
+            width: 100%;
+            height: 100%;
+            transition: width .5s;
+
+        }
+
+        .mi .next {
+            float: left;
+            width: 0%;
+            height: 100%;
+            transition: width .5s;
+        }
+
+
+        .mi:hover .pre {
+            width: 0;
+
+        }
+
+        .mi:hover .next {
+            width: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mi">
+        <img class="pre" src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\10-前端基础-HTML5CSS3提高\作业\02_仿小米logo\images\mi-logo.png"
+            alt="">
+        <img class="next" src="D:\赵宏建de百宝箱\IT资料\html基础班配套资料\基础班\10-前端基础-HTML5CSS3提高\作业\02_仿小米logo\images\mi-home.png"
+            alt="">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #ff9854;
+  --van-search-left-icon-color:var(--primary-color) ;
+  --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+
+
+  /* 全局修改: 任何地方只要用到-van-tabbar-item-icon-size都会被修改掉 */
+  /* --van-tabbar-item-icon-size: 30px !important; */
+}
+
+body {
+  font-size: 14px;
+}
+
+.top-page {
+  position: relative;
+  z-index: 9;
+  background-color: #fff;
+  height: 100vh;
+
+/* 不会进行页面的滚动 */
+  overflow-y: auto;
+}

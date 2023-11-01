@@ -1,0 +1,334 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 版心 */
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+body {
+    height: 3000px;
+    background-color: #f3f5f7;
+}
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+}
+
+.nav li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav li a {
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 10px;
+    font-style: 18px;
+    color: #050505;
+}
+
+.nav {
+    margin-left: 60px;
+    float: left;
+}
+
+.nav li a:hover {
+    color: #00a4ff;
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    float: left;
+    margin-left: 50px;
+    width: 412px;
+    height: 42px;
+}
+
+.search input {
+    float: left;
+    padding-left: 15px;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+}
+
+.search button {
+    float: left;
+    /* button默认有个边框 */
+    border: 0;
+    width: 50px;
+    height: 42px;
+    background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/07-前端基础CSS第五天/案例/study/images/btn.png);
+}
+
+.banner {
+    height: 421px;
+    background-color: #01036c;
+}
+
+.banner .w {
+    height: 421px;
+    background: url(D:/赵宏建de百宝箱/IT资料/html基础班配套资料/基础班/07-前端基础CSS第五天/案例/study/images/banner2_20190819_210028.png) no-repeat top center;
+    /* background-color: pink; */
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 421px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* a是没有块属性的,给他的li加margin */
+
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    margin: 0 20px;
+}
+
+.subnav ul li a span {
+    float: right;
+
+}
+
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.course h2 {
+    color: #fff;
+    background-color: #98cbee;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+}
+
+.bd {
+    padding: 0 20px;
+}
+
+.bd ul li h4 {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.bd ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bd .more {
+    margin-top: 8px;
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    font-weight: 700;
+    color: #00a4ff;
+}
+
+/* 精品推荐模块 */
+.recommend {
+    margin-top: 10px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 2px 4px 3px 3px rgba(0, 0, 0, 0.3);
+    /* 行高会继承给三个孩子 */
+    line-height: 60px;
+}
+
+.recommend h3 {
+    font-style: 16px;
+    margin-left: 30px;
+    float: left;
+    color: #00a4ff;
+}
+
+.recommend ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.recommend .mod {
+    margin-right: 30px;
+    float: right;
+    font-style: 14px;
+    color: #00a4ff;
+}
+
+.recommend ul li {
+    float: left;
+}
+
+.recommend ul li a {
+    padding: 0 30px;
+    border-left: 1px solid #ccc;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+.box-hd {
+    height: 45px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-style: 20px;
+    color: #494949;
+}
+
+.box-hd a {
+    float: right;
+    color: #a5a5a5;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+.box-bd ul {
+    width: 1225px;
+}
+
+.box-bd ul li {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+}
+
+.box-bd ul li>img {
+    width: 100%;
+}
+
+.box-bd ul li em {
+    position: absolute;
+    top: 5px;
+    right: -4px;
+}
+
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-style: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.box-bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box-bd .info span {
+    color: #ff7c2d;
+}
+
+.footer {
+    background-color: #fff;
+    height: 415px;
+}
+
+.footer .w {
+    padding-top: 35px;
+}
+
+.copyright {
+    float: left;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #666;
+    margin: 15px 0;
+}
+
+.links {
+    float: right;
+}
+
+.copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+
+}
+
+.links dl dt {
+    font-style: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.links dl dd a {
+    color: #333;
+    font-style: 12px;
+}
+
+.links dl {
+    float: right;
+    margin-right: 100px;
+}
